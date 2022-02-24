@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> --> 
+
+</head>
+
+<body>
+
+    <h2>Contact</h2>
+
+    <form action="action_page.html" id="myForm" name="myForm" method="get">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="first name" required><br><br>
+
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" placeholder="last name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="email" required><br><br>
+
+        <label for="birthday">Birthday:</label><br>
+        <input type="date" id="birthday" name="birthday" required><br><br>
+
+        <label for="pnumber">Phone number:</label><br>
+        <input type="tel" id="pnumber" name="pnumber" placeholder="phone number" required><br><br>
+
+        <label for="adress">Adress:</label><br>
+        <input type="text" id="adress" name="adress" placeholder="adress" readonly><br><br>
+        
+        <label for="zcode">Zip code:</label><br>
+        <input type="text" id="zcode" name="zcode" placeholder="ZIP code" readonly><br><br>
+
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city" placeholder="city" readonly><br><br>
+
+        <label for="country">Country:</label><br>
+        <input type="text" id="country" name="country" placeholder="country" ><br><br>
+
+        <input type="submit" placeholder="Submit">
+    </form>
+
+    <h2>REGISTER</h2>
+
+    <form action="action_page.html" id="myForm" name="myForm" method="get">
+
+        <label for="uname">Username:</label><br>
+        <input type="text" id="uname" name="uname" placeholder="username" placeholder="username" required ><br><br>
+
+        <label for="pword">Password:</label><br>
+        <input type="password" id="pword" name="pword" placeholder="password" min="6" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="email" required><br><br>
+
+        <label for="birthday">Birthday:</label><br>
+        <input type="date" id="birthday" name="birthday" required><br><br>
+
+        <label for="pnumber">Phone number:</label><br>
+        <input type="tel" id="pnumber" name="pnumber" placeholder="phone number" required><br><br>
+
+
+        <input type="submit" placeholder="Submit">
+    </form>
+
+    <script>
+        function myFunction(){
+            alert("The form was submitted");
+        }
+    </script>    
+
+</body>
+
+</html>

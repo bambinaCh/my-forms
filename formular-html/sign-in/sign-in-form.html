@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>SIGN IN </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+
+    <style>
+
+
+        /* Style the container for inputs */
+        .wrapper {
+            background-color: #f1f1f1;
+            padding: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .title {
+            background-color: rgba(0, 0, 0, 0.541);
+            color: purple;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+
+        /* Style all input fields */
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+        }
+
+        input[type=checkbox] {
+            width: 25%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.534);
+            color: purple;
+        }
+        /* Style the submit button */
+        input[type=reset] {
+            background-color: rgba(0, 0, 0, 0.534);
+            color: purple;
+        }
+
+        input[type=submit] {
+            background-color: rgba(128, 0, 128, 0.589);
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+
+        <div class="title">
+            <h2>SIGN IN</h2>
+        </div>
+         
+        <form action="sign-in-result.html" id="myForm" name="myForm" method="post" onsubmit="return myFunction()">
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required><br><br>
+
+            <label for="uname">Username:</label><br>
+            <input type="text" id="uname" name="uname" placeholder="username" required><br><br>
+
+            <label for="pword">Password:</label><br>
+            <input type="password" id="pword" name="pword" placeholder="password" min="6" max="100" required><br><br>
+            <input type="checkbox" onclick="hidePassword()">Show Password<br><br>
+
+            <label for="birthday">Birthday:</label><br>
+            <input type="date" id="birthday" name="birthday" required><br><br>
+
+            <label for="pnumber">Phone number:</label><br>
+            <input type="tel" id="pnumber" name="pnumber" placeholder="optional"><br><br>
+
+            <input type="reset" value="Reset">
+            <input type="submit" placeholder="Submit">
+        </form>
+    </div>
+
+    <script>
+        function myFunction() {
+
+            alert("Welcome by B Natural");
+
+            sessionStorage.setItem("username", document.getElementById("uname").value);
+            sessionStorage.setItem("password", document.getElementById("pword").value);
+            sessionStorage.setItem("email", document.getElementById("email").value);
+            sessionStorage.setItem("birthday", document.getElementById("birthday").value);
+            sessionStorage.setItem("phoneNumber", document.getElementById("pnumber").value);
+
+            return true;
+        }
+
+        function hidePassword() {
+
+            var x = document.getElementById("pword");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

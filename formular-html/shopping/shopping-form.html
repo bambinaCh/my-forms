@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Shopping Form </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+
+    <style>
+        /* Style the container for inputs */
+        .wrapper {
+            background-color: #f1f1f1;
+            padding: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .title {
+            background-color: rgba(0, 0, 0, 0.541);
+            color: purple;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+
+        /* Style all input fields */
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+        }
+
+        input[type=checkbox] {
+            width: 25%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.534);
+            color: purple;
+        }
+
+        /* Style the submit button */
+        input[type=reset] {
+            background-color: rgba(0, 0, 0, 0.534);
+            color: purple;
+        }
+
+        input[type=submit] {
+            background-color: rgba(128, 0, 128, 0.589);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="title">
+            <h2>Shipping</h2>
+        </div>
+        
+        <form action="shopping-result.html" id="myForm" name="myForm" method="post" onsubmit="return myFunction()">
+
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="first name" required><br><br>
+
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" placeholder="last name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="email" required><br><br>
+
+            <label for="country">Country:</label><br>
+            <input type="text" id="country" name="country" placeholder="country" required><br><br>
+
+            <label for="city">City:</label><br>
+            <input type="text" id="city" name="city" placeholder="city" required><br><br>
+
+            <label for="adress">Address 1:</label><br>
+            <input type="text" id="address" name="address" placeholder="address" required><br><br>
+
+            <label for="adress2">Address 2:</label><br>
+            <input type="text" id="address2" name="address2" placeholder="optional"><br><br>
+
+            <label for="zcode">ZIP code:</label><br>
+            <input type="text" id="zcode" name="zcode" placeholder="ZIP code" min="4" max="5" required><br><br>
+
+            <label for="pnumber">Phone number:</label><br>
+            <input type="tel" id="pnumber" name="pnumber" placeholder="phone number" required><br><br>
+
+
+            <input type="reset" value="Reset">
+            <input type="submit" placeholder="Submit">
+        </form>
+
+    </div>
+
+
+    <script>
+        function myFunction() {
+            alert("Thank you for your purchase!");
+
+            sessionStorage.setItem("firstName", document.getElementById("fname").value);
+            sessionStorage.setItem("lastName", document.getElementById("lname").value);
+            sessionStorage.setItem("email", document.getElementById("email").value);
+            sessionStorage.setItem("country", document.getElementById("country").value);
+            sessionStorage.setItem("city", document.getElementById("city").value);
+            sessionStorage.setItem("address", document.getElementById("address").value);
+            sessionStorage.setItem("zipCode", document.getElementById("zcode").value);
+            sessionStorage.setItem("phoneNumber", document.getElementById("pnumber").value);
+
+            return true;
+        }
+
+    </script>
+
+</body>
+
+</html>
